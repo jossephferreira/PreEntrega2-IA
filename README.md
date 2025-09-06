@@ -2,14 +2,14 @@
 
 ## 📌 Introducción
 Este proyecto busca demostrar cómo la ingeniería de prompts puede ayudar a
-generar materiales educativos personalizados, tanto en formato **texto** como en
-**imágenes**, utilizando modelos de IA.
+generar materiales educativos personalizados, tanto en formato texto como en
+imágenes, utilizando modelos de IA.
 
 ## 🎯 Objetivos
 - Demostrar la comprensión de los principios y técnicas detrás del *Fast Prompting*.
 - Experimentar con diferentes configuraciones de prompts para optimizar la eficacia.
 - Preparar una demostración efectiva en **Jupyter Notebook** mostrando la POC.
-- Analizar si las técnicas aprendidas permiten mejorar la propuesta planteada en la Preentrega.
+- Analizar si las técnicas aprendidas permiten mejorar la propuesta planteada en la Preentrega 1.
 - Diseñar un sistema de prompts educativos para generar materiales personalizados en texto e imagen.
 
 ## 🧩 Problemática
@@ -36,8 +36,7 @@ aprendizaje, niveles educativos y contextos culturales.
 - Librerías: `openai`, `diffusers`, `torch`.
 
 ## 🚀 Implementación
-
-### Ejemplo de prompt texto-texto
+Ejemplo de prompt texto-texto:
 ```python
 from openai import OpenAI
 
@@ -58,10 +57,9 @@ response = client.chat.completions.create(
 )
 
 print(response.choices[0].message.content)
-```
 
-### Ejemplo de prompt texto-imagen
-```python
+Ejemplo de prompt texto-imagen:
+
 from diffusers import StableDiffusionPipeline
 import torch
 
@@ -74,24 +72,3 @@ con flechas claras, etiquetas descriptivas y colores suaves.
 
 image = pipe(prompt).images[0]
 image.save("ciclo_agua.png")
-```
-
-## 📂 Estructura del Repositorio
-```
-Prompt-Engineering-Educativo/
-│
-├── README.md              # Documentación completa del proyecto
-├── notebooks/
-│   └── POC.ipynb          # Notebook con la Prueba de Concepto
-├── prompts/
-│   ├── texto_texto.md     # Biblioteca de prompts para generación de texto
-│   └── texto_imagen.md    # Biblioteca de prompts para generación de imágenes
-├── requirements.txt       # Librerías necesarias
-└── docs/
-    └── PreEntrega2.pdf    # Documento original entregado
-```
-
-## 🏆 Resultados Esperados
-- Biblioteca de prompts educativos optimizados.
-- Protocolo de validación de contenidos.
-- Documentación para replicar el sistema en diferentes contextos educativos.
